@@ -8,10 +8,12 @@ using namespace std;
 
 class TeamLeader {
 public:
+    //将记录的时间放在容器里储存
     void recordAnswerTime(double timeTaken) {
-        answerTimes.push_back(timeTaken);
+        answerTimes.push_back(timeTaken);                   
     }
 
+    //计算平均用时
     double calculateAverageTime() const {
         if (answerTimes.empty()) {
             return 0.0;
@@ -28,6 +30,14 @@ public:
             return 0.0;
         }
         return *std::min_element(answerTimes.begin(), answerTimes.end());
+    }
+
+    double getLongtestTime() const {
+        if (answerTimes.empty()){
+            return 0.0;
+        }
+        return *std::max_element(answerTimes.begin(), answerTimes.end());
+        
     }
 
 private:
@@ -93,6 +103,7 @@ int main() {
     // 输出队长答题的平均用时和最短用时
     cout << "队长答题平均用时：" << teamLeader.calculateAverageTime() << " 秒\n";
     cout << "队长答题最短用时：" << teamLeader.getShortestTime() << " 秒\n";
+    cout << "队长答题最长用时：" << teamLeader.getLongtestTime() << "秒\n";
 
     system("pause");
     return 0;
