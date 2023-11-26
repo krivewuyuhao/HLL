@@ -8,7 +8,7 @@ using namespace std;
 /*
 *没有使用枚举来列出难度，且没有乘除法，
 *乘除法的选择也可以根据随机数的方式来随机用switch语句
-*封住函数，分文件编写，在vscode中至今不会
+*封装函数，进行分文件编写，在vscode中至今不会
 */
 //类
 class TeamLeader {                                              
