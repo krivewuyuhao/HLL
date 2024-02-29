@@ -205,3 +205,4 @@ int main() {
     cout << "该链表是否为空" << list.isEmpty() << endl;
     return 0;
 }
+
